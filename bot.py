@@ -39,5 +39,6 @@ async def handle_new_files(client, message: Message):
             message_id=POST_ID,
             text = f"Total files sent: `{count}`"
         )
+        print(f"Updated file sent count to {count}") 
 
 app.run()
