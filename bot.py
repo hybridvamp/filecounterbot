@@ -5,7 +5,7 @@ from pyrogram.types import Message
 
 DATABASE_URI = os.environ.get('DATABASE_URI')
 DATABASE_NAME = os.environ.get('DATABASE_NAME')
-CHAT_ID = int(os.environ.get('FILE_CHANNEL', 0))
+CHAT_ID = int(os.environ.get('CHAT_ID', 0))
 API_ID = int(os.environ.get('API_ID'))
 API_HASH = os.environ.get('API_HASH')
 BOT_TOKEN = os.environ.get('BOT_TOKEN')
