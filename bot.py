@@ -5,7 +5,7 @@ from pyrogram.types import Message
 
 DATABASE_URI = os.environ.get('DATABASE_URI')
 DATABASE_NAME = os.environ.get('DATABASE_NAME')
-CHAT_ID = int(os.environ.get('CHAT_ID'))
+CHAT_ID = os.environ.get('CHAT_ID')
 API_ID = int(os.environ.get('API_ID'))
 API_HASH = os.environ.get('API_HASH')
 BOT_TOKEN = os.environ.get('BOT_TOKEN')
@@ -37,7 +37,7 @@ async def handle_new_files(client, message: Message):
         await app.edit_message_text(
             chat_id=CHAT_ID,
             message_id=POST_ID,
-            text=f"Total files sent: {count}"
+            text = f"Total files sent: `{count}`"
         )
 
 app.run()
