@@ -9,6 +9,7 @@ CHAT_ID = int(os.environ.get('CHAT_ID'))
 API_ID = int(os.environ.get('API_ID'))
 API_HASH = os.environ.get('API_HASH')
 BOT_TOKEN = os.environ.get('BOT_TOKEN')
+POST_ID = int(os.environ.get('API_ID'))
 
 app = Client(
     "my_bot",
@@ -19,7 +20,7 @@ app = Client(
 
 myclient = pymongo.MongoClient(DATABASE_URI)
 mydb = myclient[DATABASE_NAME]
-POST_ID = 5
+
 
 @app.on_message(filters.chat(CHAT_ID))
 async def handle_new_files(client, message: Message):
