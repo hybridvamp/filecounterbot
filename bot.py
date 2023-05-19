@@ -27,7 +27,7 @@ async def handle_new_files(client, message: Message):
     # Increment the total files count in the database
         mycol = mydb["file_counts"]
         myquery = {"_id": "total_files_sent"}
-        newvalues = {"$inc": {"count": 97522}}
+        newvalues = {"$inc": {"count": 1}}
         mycol.update_one(myquery, newvalues, upsert=True)
                         
         # Get the current total files count from the database
